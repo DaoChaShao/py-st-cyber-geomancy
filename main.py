@@ -6,19 +6,12 @@
 # @File     :   main.py
 # @Desc     :   
 
-from utilis.tools import is_model, similarity_checker, Timer
+from utilis.layout import pages_layout
 
 
 def main() -> None:
     """ streamlit run main.py """
-    model_name: str = "cc.en.300"
-    is_model(model_name)
-
-    vocab_x: str = "cat"
-    vocab_y: str = "dog"
-    with Timer("Word Vector Similarity") as timer:
-        similarity_checker(model_name, vocab_x, vocab_y)
-    print(timer)
+    pages_layout()
 
 
 if __name__ == "__main__":
