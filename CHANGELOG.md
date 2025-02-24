@@ -26,6 +26,7 @@
 
 ### Docs
 
+- update CHANGELOG.md with recent feature additions and improvements ([bac458e](https://github.com///commit/bac458e0f7634fcb4095169a33a87146b2459795))
 - add CHANGELOG.md to document project milestones and updates ([7cd108b](https://github.com///commit/7cd108b398d732a4308bae20e15307343108f83d))
 - add README.md with application introduction and resources ([f6d1adb](https://github.com///commit/f6d1adbe09aa26cc07baf902b6a3e49d5340edab))
 
