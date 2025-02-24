@@ -1,0 +1,4 @@
+gensim
+git-changelog
+streamlit
+watchdog
