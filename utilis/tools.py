@@ -42,7 +42,18 @@ def model_size_getter(model_name: str) -> str:
     return out
 
 
-def similarity_checker(model_name: str, vocab_x: str, vocab_y: str, presision: int = 2) -> float | None:
+def is_lang(model_name: str, vocab_x: str, vocab_y: str) -> bool:
+    """ Check the language of the pre-trained model """
+    if "en" in model_name and vocab_x.isascii() and vocab_y.isascii():
+        return True
+    elif "zh" in model_name and not vocab_x.isascii() and not vocab_y.isascii():
+        return True
+    else:
+        return False
+
+
+def similarity_checker(model_name: str, vocab_x: str, vocab_y: str, messages: empty,
+                       precision: int = 2) -> float | None:
     """ Check the similarity between two words """
     model_path = f"models/{model_name}.vec"
 
@@ -50,16 +61,20 @@ def similarity_checker(model_name: str, vocab_x: str, vocab_y: str, presision: i
 
     word_x, word_y = vocab_x, vocab_y
 
-    if word_x in model.key_to_index and word_y in model.key_to_index:
-        similarity = model.similarity(word_x, word_y)
-        print(f"The Cosine Similarity between {word_x} and {word_y} is: {similarity:.{presision}f}")
-        return similarity
-    elif word_x not in model.key_to_index:
-        print(f"{word_x} is not in the vocabulary.")
-        markdown(f"**{word_x}** is not in the vocabulary.")
+    if is_lang(model_name, word_x, word_y):
+        if word_x in model.key_to_index and word_y in model.key_to_index:
+            similarity = model.similarity(word_x, word_y)
+            print(f"The Cosine Similarity between {word_x} and {word_y} is: {similarity:.{precision}f}")
+            return similarity
+        elif word_x not in model.key_to_index:
+            print(f"{word_x} is not in the vocabulary.")
+            markdown(f"**{word_x}** is not in the vocabulary.")
+        else:
+            print(f"**{word_y}** is not in the vocabulary.")
+            markdown(f"**{word_y}** is not in the vocabulary.")
     else:
-        print(f"**{word_y}** is not in the vocabulary.")
-        markdown(f"**{word_y}** is not in the vocabulary.")
+        print("The language of the model and the words are not matched.")
+        messages.error("The language of the model and the words are not matched.")
 
 
 class Timer(object):
@@ -124,19 +139,25 @@ class Colour(StrEnum):
     GRAY: str = "#525352"
 
 
-def plot_similarity(value: float):
+def plot_similarity(value: float, vocab_x: str, vocab_y: str) -> None:
     # Prepare the data for the bar chart
     data = DataFrame({"similarity": [value]})
     data_editor(data, disabled=True, hide_index=True, use_container_width=True)
 
     if 0 < value < 1:
-        X: str = "Completely Identical"
+        result: str = "Completely Identical"
         colour = Colour.GREEN
+        geo: str = "You are CLOSE to each other!"
     elif value == 0:
-        X: str = "No Similarity"
+        result: str = "No Similarity"
         colour = Colour.GRAY
+        geo: str = "You are NEUTRAL!"
     else:
-        X: str = "Completely Opposite"
+        result: str = "Completely Opposite"
         colour: str = Colour.RED
+        geo: str = "You are FAR AWAY from each other!"
 
-    bar_chart(data, x_label=X, color=colour, use_container_width=True)
+    title: str = f"The Similarity Result between {vocab_x} and {vocab_y} is {result}"
+    markdown(f"##### {title}")
+    bar_chart(data, x=None, color=colour, use_container_width=True)
+    markdown(f"##### {geo}")
