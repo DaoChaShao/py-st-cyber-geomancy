@@ -35,6 +35,7 @@
 
 ### Docs
 
+- update CHANGELOG.md with additional entries for recent changes ([7ed35df](https://github.com///commit/7ed35df626c1fb6cace8ff96bd2590b4eff8676e))
 - update CHANGELOG.md with recent feature enhancements and improvements ([09b8ffa](https://github.com///commit/09b8ffaca4e789c882640b7aa1320932e4c79e7a))
 - add explanations for model usage and performance in README.md ([f158d92](https://github.com///commit/f158d92e9ad9072c61397bcb7c1d833f4a31a25c))
 - add note about model testing duration in home.py ([0d54291](https://github.com///commit/0d54291f5c5da1852ecb15d2f45707efb2f39536))
