@@ -5,6 +5,8 @@
 
 ### Features
 
+- enhance similarity_checker and plot_similarity functions with language validation and improved output formatting ([595e749](https://github.com///commit/595e7499feba89de3737dd750121964050cf8b26))
+- update similarity calculation in geomancy.py to include additional parameters for improved plotting ([025deaf](https://github.com///commit/025deafae4dcf37af0822c82d20cb63a5c9ce6e8))
 - enhance tools.py with improved similarity checker and visualization features ([6b26f11](https://github.com///commit/6b26f11f79efc3c956308848aa73dc25794958c6))
 - add pandas to requirements for data manipulation support ([bcea805](https://github.com///commit/bcea805a3172fa9ae4dd0e84653ca5b2e41fbd62))
 - enhance geomancy.py to include similarity plotting and loading spinner ([f907dfc](https://github.com///commit/f907dfc83723ce7f79070ba32a63b7ee172656e3))
@@ -26,7 +28,8 @@
 
 ### Docs
 
-- update CHANGELOG.md with recent feature additions and improvements ([bac458e](https://github.com///commit/bac458e0f7634fcb4095169a33a87146b2459795))
+- add note about model testing duration in home.py ([0d54291](https://github.com///commit/0d54291f5c5da1852ecb15d2f45707efb2f39536))
+- update CHANGELOG.md with recent feature additions and improvements ([c2f577e](https://github.com///commit/c2f577e5fd164323997ebba7d24fec68551d5ae5))
 - add CHANGELOG.md to document project milestones and updates ([7cd108b](https://github.com///commit/7cd108b398d732a4308bae20e15307343108f83d))
 - add README.md with application introduction and resources ([f6d1adb](https://github.com///commit/f6d1adbe09aa26cc07baf902b6a3e49d5340edab))
 
