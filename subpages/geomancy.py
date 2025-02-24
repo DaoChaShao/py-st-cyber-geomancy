@@ -6,9 +6,11 @@
 # @File     :   geomancy.py
 # @Desc     :
 
-from streamlit import empty, sidebar, button
+from random import uniform
+from streamlit import empty, sidebar, button, spinner
 
-from utilis.tools import params, is_model, similarity_checker, Timer
+from utilis.tools import (params, is_model, similarity_checker,
+                          Timer, plot_similarity)
 
 empty_messages: empty = empty()
 
@@ -23,9 +25,10 @@ with sidebar:
     check = button("Check Similarity", type="primary", help="Check the similarity between two words.")
 
 if check:
-    empty_messages.warning("Please wait for the result...")
-
-    with Timer("Word Vector Similarity") as timer:
-        similarity_checker(model_name, vocab_x, vocab_y)
+    with Timer(empty_messages, "Word Vector Similarity") as timer:
+        with spinner("The relationship between names is Calculating...", show_time=True):
+            similarity: float = similarity_checker(model_name, vocab_x, vocab_y)
+            # similarity: float = uniform(-1.0, 1.0)
+            plot_similarity(similarity)
 
     empty_messages.success(timer)
