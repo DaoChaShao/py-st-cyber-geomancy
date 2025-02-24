@@ -27,8 +27,8 @@ with sidebar:
 if check:
     with Timer(empty_messages, "Word Vector Similarity") as timer:
         with spinner("The relationship between names is Calculating...", show_time=True):
-            similarity: float = similarity_checker(model_name, vocab_x, vocab_y)
+            similarity: float = similarity_checker(model_name, vocab_x, vocab_y, empty_messages)
             # similarity: float = uniform(-1.0, 1.0)
-            plot_similarity(similarity)
+            plot_similarity(similarity, vocab_x, vocab_y)
 
     empty_messages.success(timer)
