@@ -1,4 +1,5 @@
 gensim
 git-changelog
+pandas
 streamlit
 watchdog
