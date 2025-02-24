@@ -1,10 +1,15 @@
 <!-- insertion marker -->
 <a name="0.1.0"></a>
 
-## [0.1.0](https://github.com///compare/9a8b0295d5543bae46108a7b441b9a63e96d85ae...0.1.0) (2025-02-24)
+## [0.1.0](https://github.com///compare/9a8b0295d5543bae46108a7b441b9a63e96d85ae...0.1.0) (2025-02-25)
 
 ### Features
 
+- update home.py to enhance user guidance on model usage and performance ([c289561](https://github.com///commit/c28956115124766b7ceeb7f1bd25b91655b25984))
+- implement similarity checking using SpaCy and add model management functions ([32d3498](https://github.com///commit/32d3498aee746a4e89971b6cd5abe4b887fda0ba))
+- add scapy.py for word similarity checking using SpaCy ([3a95891](https://github.com///commit/3a958914494a4fb79498eaea06468f533b4e8fa8))
+- add spacy to requirements for enhanced NLP capabilities ([c3d0dec](https://github.com///commit/c3d0deca5f58ce9e4c4dc37813bde57ab5763f9f))
+- update pages layout to include GENSIM and SCAPY with corresponding titles and icons ([76f67d4](https://github.com///commit/76f67d4aae5c81f4e3b00904c9c300e96025da3b))
 - enhance similarity_checker and plot_similarity functions with language validation and improved output formatting ([595e749](https://github.com///commit/595e7499feba89de3737dd750121964050cf8b26))
 - update similarity calculation in geomancy.py to include additional parameters for improved plotting ([025deaf](https://github.com///commit/025deafae4dcf37af0822c82d20cb63a5c9ce6e8))
 - enhance tools.py with improved similarity checker and visualization features ([6b26f11](https://github.com///commit/6b26f11f79efc3c956308848aa73dc25794958c6))
@@ -28,7 +33,8 @@
 
 ### Docs
 
-- update CHANGELOG.md with recent feature enhancements and improvements ([8503073](https://github.com///commit/8503073da29c29a70a08748ce0b91a2d3dd38276))
+- add explanations for model usage and performance in README.md ([f158d92](https://github.com///commit/f158d92e9ad9072c61397bcb7c1d833f4a31a25c))
+- update CHANGELOG.md with recent feature enhancements and improvements ([d8f79df](https://github.com///commit/d8f79dfb8cf9dc2263eb2d26722effe8d8dd7c10))
 - add note about model testing duration in home.py ([0d54291](https://github.com///commit/0d54291f5c5da1852ecb15d2f45707efb2f39536))
 - update CHANGELOG.md with recent feature additions and improvements ([c2f577e](https://github.com///commit/c2f577e5fd164323997ebba7d24fec68551d5ae5))
 - add CHANGELOG.md to document project milestones and updates ([7cd108b](https://github.com///commit/7cd108b398d732a4308bae20e15307343108f83d))
