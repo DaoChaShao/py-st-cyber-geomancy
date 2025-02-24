@@ -29,11 +29,13 @@
 
 ### Chore
 
+- update .gitignore to exclude __pycache__ and .DS_Store files ([59ebe4d](https://github.com///commit/59ebe4ddfe8fbd7e2f02fa296e8ca90ccd8a4aa8))
+- add .gitignore to exclude unnecessary files from version control ([6a33b9d](https://github.com///commit/6a33b9d07e86061141b96ad430e5924decc16eac))
 - add pyproject.toml for changelog configuration ([c775003](https://github.com///commit/c7750036126bc44ee617b41fe9f3743025fec02d))
 
 ### Docs
 
-- update CHANGELOG.md with recent feature enhancements and improvements ([99e8b9f](https://github.com///commit/99e8b9f2f1904a5e171a0940759dc432475f9047))
+- update CHANGELOG.md with recent feature enhancements and improvements ([09b8ffa](https://github.com///commit/09b8ffaca4e789c882640b7aa1320932e4c79e7a))
 - add explanations for model usage and performance in README.md ([f158d92](https://github.com///commit/f158d92e9ad9072c61397bcb7c1d833f4a31a25c))
 - add note about model testing duration in home.py ([0d54291](https://github.com///commit/0d54291f5c5da1852ecb15d2f45707efb2f39536))
 - update CHANGELOG.md with recent feature additions and improvements ([c2f577e](https://github.com///commit/c2f577e5fd164323997ebba7d24fec68551d5ae5))
