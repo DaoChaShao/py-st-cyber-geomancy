@@ -28,6 +28,7 @@
 
 ### Docs
 
+- update CHANGELOG.md with recent feature enhancements and improvements ([8503073](https://github.com///commit/8503073da29c29a70a08748ce0b91a2d3dd38276))
 - add note about model testing duration in home.py ([0d54291](https://github.com///commit/0d54291f5c5da1852ecb15d2f45707efb2f39536))
 - update CHANGELOG.md with recent feature additions and improvements ([c2f577e](https://github.com///commit/c2f577e5fd164323997ebba7d24fec68551d5ae5))
 - add CHANGELOG.md to document project milestones and updates ([7cd108b](https://github.com///commit/7cd108b398d732a4308bae20e15307343108f83d))
