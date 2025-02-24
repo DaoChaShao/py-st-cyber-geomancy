@@ -23,6 +23,7 @@
 
 ### Docs
 
+- add CHANGELOG.md to document project milestones and updates ([04c70f5](https://github.com///commit/04c70f54f79934081ba2e13a8fff3b79cccf5042))
 - add README.md with application introduction and resources ([f6d1adb](https://github.com///commit/f6d1adbe09aa26cc07baf902b6a3e49d5340edab))
 
 ### Dependencies
